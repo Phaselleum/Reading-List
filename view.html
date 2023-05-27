@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Points</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="manifest" href="manifest.json">
+		<meta name="application-name" content="Points">
+		<meta name="apple-mobile-web-app-title" content="Points">
+		<link rel="icon" sizes="256x256" href="touch-icon.png">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body>
+		<h1>Points</h1>
+		<div style="display:flex; justify-content: center; gap: 3vw;">
+			<a href="#"><div class="titlebox">Reward</div></a>
+			<a href="#"><div class="titlebox">Punishment</div></a>
+		</div>
+		<div style="display:flex; justify-content: center; gap: 3vw;">
+			<div class="box" id="rpoints">.</div>
+			<div class="box" id="ppoints">.</div>
+		</div>
+		<div style="display:flex; justify-content: center; gap: 3vw; margin-top: 3vw;">
+			<div class="titlebox widebox">Tasks/Notes</div>
+		</div>
+		<div style="display:flex; justify-content: center; gap: 3vw;">
+			<textarea disabled name="notes" class="notesbox" id="notes">Mylady's notes</textarea>
+		</div>
+		<script>
+			$.get("readjson.php", (data, status) => {
+				if(status) console.log(status);
+				let json = JSON.parse(data);
+				$("#rpoints").text(json.points.reward);
+				$("#ppoints").text(json.points.punishment);
+			});
+			$("#notes").load("getnotes.php");
+		</script>
+	</body>
+</html>

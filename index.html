@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Reading List</title>
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="manifest" href="manifestDom.json">
+		<meta name="application-name" content="Points">
+		<meta name="apple-mobile-web-app-title" content="Points">
+		<link rel="icon" sizes="256x256" href="touch-icon.png">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body>
+		<h1>Reading List</h1>
+		<div class="titleboxwrapper">
+			<a href="authors.html"><div class="titlebox widebox sub">Authors</div></a>
+			<a href="literature.html"><div class="titlebox widebox sub">Literature</div></a>
+			<a href="video.html"><div class="titlebox widebox sub">Video</div></a>
+		</div>
+
+		<div class="titleboxwrapper">
+			<div class="titlebox widebox">Tasks/Notes</div>
+			<form action="setnotes.php">
+				<textarea name="notes" class="notesbox" id="notes">[Loading notes...]</textarea>
+				<input type="submit" class="titlebox widebox sub" value="Update">
+			</form>
+		</div>
+		<script>
+			$.get("readjson.php", (data, status) => {
+				if(status) console.log(status);
+				console.log(data);
+				let json = JSON.parse(data);
+				$("#notes").val(json.notes);
+			});
+		</script>
+	</body>
+</html>

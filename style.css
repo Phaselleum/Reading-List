@@ -1,0 +1,138 @@
+body {
+	font-family: sans-serif; 
+	text-align: center; 
+	line-height: 1.5em; 
+	font-size: 6vw; 
+	background-color: #e8b4b7;
+} 
+
+a {
+	color: black; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+
+h1 {
+	line-height: 1em;
+    margin: 0.5em 0;
+}
+
+.box {
+	border: 1px solid #400; 
+	height: 22vw; 
+	width: 27vw; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	background-color: #45464c; 
+	color: #EEE; 
+	font-size: 12vw;
+}
+
+.smallbox {
+	height: 11vw;
+	width: 13.5vw;
+	font-size: 8vw;
+}
+
+.titlebox {
+	border: solid #400;
+	border-width: 1px 1px 0; 
+	height: 11vw; 
+	width: 27vw; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	background-color: #676972;
+	color: #CCC; 
+	font-size: 4vw;
+}
+
+a .titlebox {
+	background-color: #45464c;
+}
+
+.listitembox {
+	border: solid #400;
+	border-width: 1px 1px 0;
+	min-height: 8vw;
+	width: 50vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #676972;
+	color: #CCC;
+	font-size: 4vw;
+	padding: 0;
+}
+
+.widelistbox {
+	width: calc(70vw + 3px);
+}
+
+.listitemboxbutton {
+	border: solid #400;
+	border-width: 1px 1px 0;
+	min-height: 8vw;
+	width: 10vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #45464c;
+	color: #CCC;
+	font-size: 4vw;
+}
+
+.redbutton {
+	background-color: #6A0000;
+}
+
+.widebox { 
+	width: 57vw; 
+}
+
+.titleboxwrapper {
+	display:flex;
+	justify-content: center;
+	row-gap: 0;
+	column-gap: 3vw;
+	margin: 3vw auto 0;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.listboxwrapper {
+	display:flex;
+	justify-content: center;
+	row-gap: 0;
+	column-gap: 0;
+	margin: 3vw auto 0;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.listboxwrapper input {
+	background-color: #45464c;
+}
+
+.notesbox {
+	border: 1px solid #400; 
+	height: 40vw; 
+	width: 53vw; 
+	display: flex; 
+	background-color: #45464c; 
+	color: #FFF; 
+	font-size: 3vw; 
+	padding: 2vw; 
+	line-height: 1.5em;
+	overflow-y: auto;
+    text-align: left;
+} 
+
+.sub { 
+	border-width: 0 1px 1px 1px; 
+}
+
+input[type=submit] {
+	cursor: pointer;
+}

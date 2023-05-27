@@ -1,0 +1,13 @@
+{
+  "name": "Points",
+  "short_name": "Points",
+  "icons": [{
+        "src": "touch-icon.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#e8b4b7",
+  "theme_color": "#45464c"
+}
